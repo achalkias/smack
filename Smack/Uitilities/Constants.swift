@@ -12,7 +12,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URLS
 let URL_BASE = "https://achsmack.herokuapp.com/v1"
-let URL_REGISTER = "\(URL_BASE)account/register"
+let URL_REGISTER = "\(URL_BASE)/account/register"
 
 // SEGUES
 let TO_LOGIN = "toLogin"
