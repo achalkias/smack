@@ -95,9 +95,17 @@ class CreateAccountVC: UIViewController {
                         
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
+                                //Hide spinner
                                 self.spinner.isHidden = true
                                 self.spinner.stopAnimating()
+                                
+                                //Dismis
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                
+                                //Post a notification to user
+                                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANEG
+                                    , object: nil)
+                                
                             }
                         })
                         
