@@ -31,7 +31,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRx-na-bf9">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRx-na-bf9" customClass="RoundedView" customModule="Smack" customModuleProvider="target">
                     <rect key="frame" x="20" y="80" width="335" height="320"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ur2-Z1-NDK">
@@ -124,6 +124,11 @@
                         <constraint firstItem="zK7-a8-zAx" firstAttribute="centerY" secondItem="CRx-na-bf9" secondAttribute="centerY" constant="-10" id="wjL-KU-LBH"/>
                         <constraint firstItem="k9l-iP-5Un" firstAttribute="top" secondItem="CRx-na-bf9" secondAttribute="top" constant="8" id="wpc-Cy-RcG"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
