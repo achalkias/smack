@@ -11,9 +11,10 @@ import Foundation
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URLS
-let URL_BASE = "https://achsmack.herokuapp.com/v1"
-let URL_REGISTER = "\(URL_BASE)/account/register"
-let URL_LOGIN = "\(URL_BASE)/account/login"
+let URL_BASE = "https://achsmack.herokuapp.com/v1/"
+let URL_REGISTER = "\(URL_BASE)account/register"
+let URL_LOGIN = "\(URL_BASE)account/login"
+let URL_USER_ADD = "\(URL_BASE)user/add"
 
 // SEGUES
 let TO_LOGIN = "toLogin"
