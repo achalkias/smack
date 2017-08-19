@@ -15,6 +15,7 @@ let URL_BASE = "https://achsmack.herokuapp.com/v1/"
 let URL_REGISTER = "\(URL_BASE)account/register"
 let URL_LOGIN = "\(URL_BASE)account/login"
 let URL_USER_ADD = "\(URL_BASE)user/add"
+let URL_USER_BY_EMAIL = "\(URL_BASE)user/byEmail/"
 
 //COLORS
 let smackPurplePlaceHolder = #colorLiteral(red: 0.2588235294, green: 0.3294117647, blue: 0.7254901961, alpha: 0.5)
@@ -36,3 +37,7 @@ let USER_EMAIL = "userEmail"
 //Headers
 let HEADER = [
     "Content-Type": "application/json; charset=utf-8"]
+let BEARER_HEADER = [
+    "Authorization":"Bearer \(AuthService.instance.authToken)",
+    "Content-Type": "application/json; charset=utf-8"
+]
