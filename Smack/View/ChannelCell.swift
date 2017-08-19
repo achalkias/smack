@@ -29,8 +29,10 @@ class ChannelCell: UITableViewCell {
     
     func  configureCell(channel: Channel)  {
         //Get the title and add it to uilabel
-        let title = channel._name ?? ""
-        channelName.text = "#\(title)"
+        if  let title = channel.name {
+            channelName.text = "#\(title)" } else {
+             channelName.text = "#N/A"
+        }
     }
     
 

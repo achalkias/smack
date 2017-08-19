@@ -28,7 +28,7 @@ class SocketService: NSObject {
     }
     
     func addChannel(channelName: String,channelDescription: String,completion: @escaping CompletionHandler) {
-        socket.emit("newChannel", channelName,channelDescription)
+        socket.emit("newChannel", channelName, channelDescription)
         completion(true)
     }
     
@@ -39,7 +39,7 @@ class SocketService: NSObject {
             guard let channelDesc = dataArray[1] as? String else {return}
             guard let channelId = dataArray[2] as? String else {return}
             //Create channel obj from these variables
-            let newChannel  = Channel(_id: channelId, _name: channelName, description: channelDesc, __v: 0)
+            let newChannel  = Channel(_id: channelId, name: channelName, description: channelDesc, __v: 0)
             //Append to the chanels array
             MessageService.instance.channels.append(newChannel)
             completion(true)
