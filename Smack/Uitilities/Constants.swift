@@ -16,6 +16,7 @@ let URL_REGISTER = "\(URL_BASE)account/register"
 let URL_LOGIN = "\(URL_BASE)account/login"
 let URL_USER_ADD = "\(URL_BASE)user/add"
 let URL_USER_BY_EMAIL = "\(URL_BASE)user/byEmail/"
+let URL_GET_CHANNELS = "\(URL_BASE)/channel/"
 
 //COLORS
 let smackPurplePlaceHolder = #colorLiteral(red: 0.2588235294, green: 0.3294117647, blue: 0.7254901961, alpha: 0.5)
