@@ -29,6 +29,8 @@
 		E814FE4E1F47562D00FBD929 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814FE4D1F47562D00FBD929 /* LoginVC.swift */; };
 		E874E93D1F479723009EC080 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874E93C1F479723009EC080 /* AuthService.swift */; };
 		E8D06C4C1F48931D00721F76 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D06C4B1F48931D00721F76 /* ChannelCell.swift */; };
+		E8D06C4F1F48987900721F76 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D06C4D1F48987900721F76 /* AddChannelVC.swift */; };
+		E8D06C501F48987900721F76 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D06C4E1F48987900721F76 /* AddChannelVC.xib */; };
 		E8E5FE981F4762EB00A75C03 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E5FE971F4762EB00A75C03 /* CreateAccountVC.swift */; };
 		F7AD2FE069142EF98232EE89 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0D40D8E674F2A9FE550993 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		E814FE4D1F47562D00FBD929 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E874E93C1F479723009EC080 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E8D06C4B1F48931D00721F76 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		E8D06C4D1F48987900721F76 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		E8D06C4E1F48987900721F76 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		E8E5FE971F4762EB00A75C03 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E812B8C21F48730B00580794 /* ProfileVC.xib */,
+				E8D06C4E1F48987900721F76 /* AddChannelVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				E8E5FE971F4762EB00A75C03 /* CreateAccountVC.swift */,
 				E810F0101F483E32009110C3 /* AvatarPickerVC.swift */,
 				E812B8C11F48730B00580794 /* ProfileVC.swift */,
+				E8D06C4D1F48987900721F76 /* AddChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D06C501F48987900721F76 /* AddChannelVC.xib in Resources */,
 				E812B8C41F48730B00580794 /* ProfileVC.xib in Resources */,
 				E814FE351F4729AA00FBD929 /* LaunchScreen.storyboard in Resources */,
 				E814FE321F4729AA00FBD929 /* Assets.xcassets in Resources */,
@@ -342,6 +349,7 @@
 				E814FE4E1F47562D00FBD929 /* LoginVC.swift in Sources */,
 				E814FE491F473DAE00FBD929 /* GradientView.swift in Sources */,
 				E810F0131F484044009110C3 /* AvatarCell.swift in Sources */,
+				E8D06C4F1F48987900721F76 /* AddChannelVC.swift in Sources */,
 				E814FE2B1F4729AA00FBD929 /* AppDelegate.swift in Sources */,
 				E814FE471F4739B600FBD929 /* SWRevealViewController.m in Sources */,
 				E814FE4C1F47509900FBD929 /* Constants.swift in Sources */,
