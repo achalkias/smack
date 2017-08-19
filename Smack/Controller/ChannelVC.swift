@@ -43,6 +43,14 @@ class ChannelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             }
         }
         
+        SocketService.instance.getChatMessages { (newMessage) in
+            if newMessage.channelId != MessageService.instance.selectedChannel?._id
+                && AuthService.instance.isLoggedIn {
+                MessageService.instance.unreadChannels.append(newMessage.channelId)
+                self.tableView.reloadData()
+            }
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -115,6 +123,17 @@ class ChannelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         let channel = MessageService.instance.channels[indexPath.row]
         //set it a selected chanel
         MessageService.instance.selectedChannel = channel
+        
+        if MessageService.instance.unreadChannels.count > 0 {
+            //Filter the one its not selected
+            MessageService.instance.unreadChannels = MessageService.instance.unreadChannels.filter{$0 != channel._id}
+        }
+        
+        //Reload selected
+        let index = IndexPath(row: indexPath.row, section: 0)
+        tableView.reloadRows(at: [index], with: .none)
+        tableView.selectRow(at: index, animated: false, scrollPosition: .none)
+        
         //Notif that the channel selected
         NotificationCenter.default.post(name: NOTIF_CHANNELS_SELECTED, object: nil)
         //Close the menu
