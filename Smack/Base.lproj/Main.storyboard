@@ -76,15 +76,37 @@
                                     <constraint firstItem="GFU-cU-fMe" firstAttribute="centerX" secondItem="duW-1k-SAd" secondAttribute="centerX" id="kkc-NF-Tk0"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbH-Hx-zXr">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BRi-11-xaf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36B-qQ-uNQ">
+                                <rect key="frame" x="337" y="627" width="30" height="30"/>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="sendMessagePresed:" destination="AvP-bV-TDx" eventType="touchUpInside" id="bLX-Pw-kt2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hbH-Hx-zXr" firstAttribute="leading" secondItem="ZgP-mh-wfM" secondAttribute="leading" id="27Q-Px-X3w"/>
+                            <constraint firstItem="N2u-XR-gj9" firstAttribute="top" secondItem="hbH-Hx-zXr" secondAttribute="bottom" id="HMR-2S-FwX"/>
                             <constraint firstItem="duW-1k-SAd" firstAttribute="leading" secondItem="ZgP-mh-wfM" secondAttribute="leading" id="LbS-EQ-LAG"/>
                             <constraint firstItem="duW-1k-SAd" firstAttribute="trailing" secondItem="ZgP-mh-wfM" secondAttribute="trailing" id="fU0-Gj-eSo"/>
+                            <constraint firstAttribute="trailing" secondItem="hbH-Hx-zXr" secondAttribute="trailing" id="gM1-Xp-gtj"/>
+                            <constraint firstAttribute="trailing" secondItem="36B-qQ-uNQ" secondAttribute="trailing" constant="8" id="kOb-o1-wte"/>
+                            <constraint firstItem="36B-qQ-uNQ" firstAttribute="centerY" secondItem="hbH-Hx-zXr" secondAttribute="centerY" id="lCM-dY-ejE"/>
                             <constraint firstItem="duW-1k-SAd" firstAttribute="top" secondItem="ZgP-mh-wfM" secondAttribute="top" id="xnh-q5-0CF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MessageTxtBox" destination="hbH-Hx-zXr" id="cQf-f4-y9j"/>
                         <outlet property="channelNameLbl" destination="GFU-cU-fMe" id="NVA-yk-IRj"/>
                         <outlet property="menuBtn" destination="h7d-el-DVq" id="c8q-sQ-xz9"/>
                     </connections>
@@ -621,6 +643,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>

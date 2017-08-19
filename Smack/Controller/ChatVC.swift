@@ -16,8 +16,15 @@ class ChatVC: UIViewController {
     
     @IBOutlet weak var channelNameLbl: UILabel!
     
+    @IBOutlet weak var MessageTxtBox: UITextField!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Bind the view to the keybaord so when it opens the keyboard everything will scroll upside
+       view.bindToKeyboard()
+        let tapToClose = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tapToClose)
         
         //Add a target to menu button
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)) , for: .touchUpInside)
@@ -53,6 +60,10 @@ class ChatVC: UIViewController {
         updateWithChannel()
     }
     
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
     func updateWithChannel() {
         //Get the channel name
         let channelName = MessageService.instance.selectedChannel?.name ?? ""
@@ -86,5 +97,17 @@ class ChatVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func sendMessagePresed(_ sender: Any) {
+        if (AuthService.instance.isLoggedIn) {
+            guard let channelId = MessageService.instance.selectedChannel?._id else {return}
+            guard let message = MessageTxtBox.text  else {return}
+            SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
+                self.MessageTxtBox.text = ""
+                self.MessageTxtBox.resignFirstResponder() //Close keyboard
+            })
+        }
+    }
+    
     
 }
